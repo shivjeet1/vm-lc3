@@ -1,6 +1,6 @@
-#define MEMORY_MAX (1 << 16)
-
-uint16_t memory[MEMORY_MAX]; // 65536 locations
+#include <stdio.h>
+#include <stdint.h>
+#include <signal.h>
 
 
 enum {
@@ -44,6 +44,25 @@ enum {
   OP_LEA,
   OP_TRAP
 };
+
+enum {
+  MR_KBSR = 0xFE00, //keyboard status
+  MR_KBDR = 0xFE02  //keyboard data
+};
+
+enum {
+  TRAP_GETC = 0x20,
+  TRAP_OUT = 0x21,
+  TRAP_PUTS = 0x22,
+  TRAP_IN = 0x23,
+  TRAP_PUTSP = 0x24,
+  TRAP_HALT = 0x25
+};
+
+#define MEMORY_MAX (1 << 16)
+
+uint16_t memory[MEMORY_MAX]; // 65536 locations
+
 
 
 
