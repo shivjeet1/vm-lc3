@@ -191,7 +191,7 @@ int main(int argc, const char* argv[])
 
   for (int j = 1; j < argc; ++j)
   {
-    if (!read_image(argc[j]))
+    if (!read_image(argv[j]))
     {
       printf("failed to load image: %s \n", argv[j]);
       exit(1);
@@ -249,7 +249,7 @@ int main(int argc, const char* argv[])
           uint16_t r1 = (instr >> 6) & 0x7;
           uint16_t imm_flag = (instr >> 5) & 0x1;
 
-          if (imm flag)
+          if (imm_flag)
           {
             uint16_t imm5 = sign_extend(instr & 0x1F, 5);
             reg[r0] = reg[r1] & imm5;
