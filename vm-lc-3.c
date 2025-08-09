@@ -132,6 +132,33 @@ void update_flags(uint16_t r)
   }
 }
 
+void read_image_file(FILE* file)
+{
+  uint16_t origin; //origin tells weher in memory to place the image
+  fread(&origin, sizeof(origin), 1, file);
+  origin = swap16(origin);
+
+  uint16_t max_read = MEMORY_MAX - origin; //as max file size is known , we only need one fread
+  uint16_t* p = memory + origin;
+  size_t read = fread(p, sizeof(uint16_t), max_read, file);
+
+  while(read-- > 0)
+  {
+    *p = swap16(*p);
+    ++p;
+  }
+}
+
+int read_image(const char* image_path)
+{
+  FILE* file = fopen(image_path, "rb");
+  if (!file)
+    return 0;
+  read_image_file(file);
+  fclose(file);
+  return 1;
+}
+
 int main(int argc, const char* argv[])
 {
   if (argc < 2)
