@@ -104,7 +104,7 @@ This code is for **UNIX**-based systems (Linux, macOS) only.
      ```bash
      ./vm-lc3 rogue.obj
      ```
-    > [!NOTE]
+    ```[!NOTE]
     > At the end, it all comes down on how you compile the program.
     > If you compile as given at point 2.i then use the point 4 as it is else use ./a.out like 2.ii and 3.ii.
      
