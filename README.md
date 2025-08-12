@@ -62,10 +62,60 @@ Example
 ```
 
 ### **5. Trap Routines**
-Trap routines are predefined subroutines for I/O, such as:
+Trap routines are subroutines for I/O defined in the program, such as:
 - `GETC` (Read a character), `OUT` (Output a character), `HALT` (Stop execution).
 
 For a complete ISA description, see the **Resources** below.
+
+---
+
+## Usage
+This code is for **UNIX**-based systems (Linux, macOS) only.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shivjeet1/vm-lc3.git 
+   ```
+
+2.  1. Compile the project using `gcc`:
+        ```bash
+        gcc vm-lc-3.c -o vm-lc3
+        ```
+    2. Compile the project using `gcc`:
+        ```bash
+        gcc vm-lc-3.c
+        ```
+
+3.  1. Run the VM with an LC-3 program file:
+       ```bash
+       ./vm-lc3 program.obj
+       ```
+    2. Run the VM with an LC-3 program file:
+       ```bash
+       ./a.out program.obj
+       ```
+
+4. **Test the VM with Example Binaries**:
+   - **2048 Game**:
+     ```bash
+     ./vm-lc3 2048.obj
+     ```
+   - **Rogue-like Game**:
+     ```bash
+     ./vm-lc3 rogue.obj
+     ```
+    ```> [!NOTE]
+> It depends on how you compile the program.
+> If you compile as given at point 2.1 then use the 4.0 as it is else use ./a.out like 2.2 and 3.2.
+    ``` 
+---
+
+## File Descriptions
+
+- **Core Files**:
+  - `vm-lc-3.c`: Implements the main logic for decoding and executing LC-3 instructions.
+  - `2048.obj` : Binary of 2048 game made in assembler for LC3 architecture.
+  - `rogue.obj` : Binary of rogue(Pacman like game) made for LC3 architecture using Assembler.
 
 ---
 
@@ -73,12 +123,12 @@ For a complete ISA description, see the **Resources** below.
 
 This project is based on and heavily inspired by the tutorial "[Writing a Simple Virtual Machine](https://www.jmeiners.com/lc3-vm/)" by Justin Meiners. The tutorial provides a step-by-step guide for implementing an LC-3 VM and is an excellent resource for learning about virtual machines and computer architecture.
 
+- Readme is based on [chebanne-az][https://github.com/chebanne-az/lc3-vm/blob/main/README.md]
 ---
 
 ## Resources 
 - [Writing a Simple Virtual Machine](https://www.jmeiners.com/lc3-vm/)
 - [LC-3 ISA](https://www.jmeiners.com/lc3-vm/supplies/lc3-isa.pdf)
-
 
 
 
