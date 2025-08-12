@@ -105,8 +105,8 @@ This code is for **UNIX**-based systems (Linux, macOS) only.
      ./vm-lc3 rogue.obj
      ```
     ```> [!NOTE]
-> It depends on how you compile the program.
-> If you compile as given at point 2.1 then use the 4.0 as it is else use ./a.out like 2.2 and 3.2.
+> At the end, it all comes down on how you compile the program.
+> If you compile as given at point 2.i then use the point 4 as it is else use ./a.out like 2.ii and 3.ii.
     ``` 
 ---
 
