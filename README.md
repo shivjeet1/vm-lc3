@@ -123,7 +123,7 @@ This code is for **UNIX**-based systems (Linux, macOS) only.
 
 This project is based on and heavily inspired by the tutorial "[Writing a Simple Virtual Machine](https://www.jmeiners.com/lc3-vm/)" by Justin Meiners. The tutorial provides a step-by-step guide for implementing an LC-3 VM and is an excellent resource for learning about virtual machines and computer architecture.
 
-- Readme is based on [chebanne-az][https://github.com/chebanne-az/lc3-vm/blob/main/README.md]
+- Readme is based on [chebanne-az](https://github.com/chebanne-az/lc3-vm/blob/main/README.md)
 ---
 
 ## Resources 
